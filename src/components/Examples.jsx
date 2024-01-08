@@ -31,14 +31,20 @@ export default function Examples() {
 
     return (
         <Section title='Examples' id="examples">
-            <Tabs buttonsContainer="menu" buttons={<><TabButton isSelected={selectedTopic === 'components'}
-                onClick={() => handleClick('components')} label="Component" />
-                <TabButton isSelected={selectedTopic === 'jsx'}
-                    onClick={() => handleClick('jsx')} label="JSX" />
-                <TabButton isSelected={selectedTopic === 'props'}
-                    onClick={() => handleClick('props')} label="Props" />
-                <TabButton isSelected={selectedTopic === 'state'}
-                    onClick={() => handleClick('state')} label="State" /></>}>{tabContent}</Tabs>
+            <Tabs
+                // buttonsContainer="menu" 
+                buttons={<>
+                    <TabButton isSelected={selectedTopic === 'components'}
+                        onClick={() => handleClick('components')} label="Component" />
+                    <TabButton isSelected={selectedTopic === 'jsx'}
+                        onClick={() => handleClick('jsx')} label="JSX" />
+                    <TabButton isSelected={selectedTopic === 'props'}
+                        onClick={() => handleClick('props')} label="Props" />
+                    <TabButton isSelected={selectedTopic === 'state'}
+                        onClick={() => handleClick('state')} label="State" /></>}
+            >
+                {tabContent}
+            </Tabs>
         </Section>
     )
 }
