@@ -2,7 +2,7 @@
 //     return <li><button>{children}</button></li>
 // };
 
-export default function TabButton({ label, onSelect, isSelected }) {
+export default function TabButton({ label, isSelected, ...props }) {
     // document.querySelector('button').addEventListener('click', () => {
     // });
 
@@ -10,7 +10,7 @@ export default function TabButton({ label, onSelect, isSelected }) {
 
     return (
         <li>
-            <button className={isSelected && 'active'} onClick={onSelect}>{label}</button>
+            <button className={isSelected ? 'active' : null} {...props}>{label}</button>
         </li>
     )
 };
